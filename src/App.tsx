@@ -2,10 +2,13 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers } from './features/Users/UsersHandler'
 import Cards from './components/Cards/Cards'
+import { AppDispatch, RootState } from './app/store'
 
-function App() {
-  const dispatch = useDispatch()
-  const { users } = useSelector((state) => state.users)
+function App(): JSX.Element {
+  const dispatch = useDispatch<AppDispatch>()
+  const { users } = useSelector<RootState, RootState['users']>(
+    (state) => state.users
+  )
 
   useEffect(() => {
     dispatch(fetchUsers())

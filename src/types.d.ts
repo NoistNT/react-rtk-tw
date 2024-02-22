@@ -1,5 +1,5 @@
-export type initialStateType = {
-  users: Array<string>
+export type InitialStateType = {
+  users: Array<User>
   isLoading: boolean
   error: string | null | unknown
 }
