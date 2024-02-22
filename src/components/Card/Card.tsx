@@ -1,4 +1,4 @@
-import { User } from '../../types'
+import { User } from '@/types'
 
 export default function Card({ user }: { user: User }) {
   return (
