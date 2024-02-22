@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { fetchUsers } from './UsersHandler'
+import { initialStateType } from '../../types'
 
-const initialState = {
+const initialState: initialStateType = {
   users: [],
   isLoading: false,
   error: null

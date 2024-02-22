@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
-export default function Card({ user }) {
+import { User } from '../../types'
+
+export default function Card({ user }: { user: User }) {
   return (
     <div className='flex flex-col p-4 w-96 bg-slate-800 shadow-md rounded-md border-l-2 border-slate-600 hover:bg-indigo-900 hover:shadow-lg hover:cursor-pointer transition'>
       <h3 className='pb-2 text-2xl text-cyan-600 '>{user.name}</h3>
